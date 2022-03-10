@@ -159,7 +159,6 @@ router.get('/list',(req,res)=>{
 
 // 6.删除用户  get  /delete
 router.get('/delete',(req,res)=>{
-
   // 6.1获取编号数据
   let obj=req.query;
   console.log(obj);
