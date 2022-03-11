@@ -5,9 +5,9 @@ let router=express.Router();
 
 // 挂载路由
 // 1.用户注册  post  /register
-router.post('/register',(req,res)=>{
+router.get('/register',(req,res)=>{
   // 1.1获取post请求的数据
-  let obj=req.body;
+  let obj=req.query;
   console.log(obj);
   // 1.2验证数据是否为空，如果为空做出响应
   if(!obj.uname){
@@ -96,10 +96,10 @@ router.get('/detail',(req,res)=>{
 });
 
 // 4.修改用户资料  post /update
-router.post('/update',(req,res)=>{
+router.get('/update',(req,res)=>{
 
   // 4.1获取编号数据
-  let obj=req.body;
+  let obj=req.query;
   console.log(obj);
 
   // 4.2验证数据是否为空
