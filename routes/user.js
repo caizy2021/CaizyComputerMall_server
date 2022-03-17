@@ -4,9 +4,9 @@ let router=express.Router();
 
 
 // 挂载路由
-// 1.用户注册  post  /register
+// 1.用户注册  get  /register
 router.get('/register',(req,res)=>{
-  // 1.1获取post请求的数据
+  // 1.1获取get请求的数据
   let obj=req.query;
   console.log(obj);
   // 1.2验证数据是否为空，如果为空做出响应
@@ -39,7 +39,7 @@ router.get('/register',(req,res)=>{
   });
 });
 
-// 2.用户登录  post  /login
+// 2.用户登录  get  /login
 router.get('/login',(req,res)=>{
 
   // 2.1获取数据
@@ -96,10 +96,10 @@ router.get('/detail',(req,res)=>{
 });
 
 // 4.修改用户资料  post /update
-router.get('/update',(req,res)=>{
+router.post('/update',(req,res)=>{
 
   // 4.1获取编号数据
-  let obj=req.query;
+  let obj=req.body;
   console.log(obj);
 
   // 4.2验证数据是否为空

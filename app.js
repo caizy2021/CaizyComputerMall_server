@@ -27,7 +27,7 @@ let app = express();
 app.use(
   cors({
     //       VUE脚手架项目             Live Server
-    origin: ["http://127.0.0.1:8080", "http://127.0.0.1.9999"],
+    origin: ["http://127.0.0.1:8080","http://caizy.cc:83, "http://127.0.0.1:9999"],
     credentials: true,
   })
 );
