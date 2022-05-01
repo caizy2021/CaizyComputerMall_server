@@ -27,13 +27,15 @@ let app = express();
 app.use(
   cors({
     //       VUE脚手架项目             Live Server
-    origin: ["http://127.0.0.1:8080","http://caizy.cc:83, "http://127.0.0.1:9999"],
+    origin: ["http://127.0.0.1:8080","http://caizy.cc:83", "http://127.0.0.1:9999"],
     credentials: true,
   })
 );
 
 // 监听端口
-app.listen(9999);
+app.listen(9999,() => {
+  console.log("server running at http://localhost:9999");
+});
 
 // 托管静态资源到public目录下
 app.use(express.static("public"));
